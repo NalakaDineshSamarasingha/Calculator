@@ -17,7 +17,7 @@ function App() {
   function action(event){
     const x = event.target.value;
     setOperator(operator+x);
-    setTotal(total + value);
+    setTotal(total + value.toString());
     setValue("");
   }
   function equal(){
@@ -31,7 +31,7 @@ function App() {
       setValue(Number(total)*Number(value));
     }
     setOperator("");
-    setTotal(total+value);
+    setTotal("");
   }
   return (
     <div className="App">
