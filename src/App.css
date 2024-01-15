@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  height: 100vh;
+  height: 100dvh;
+  width: 100%;
+  background: #5e656b;
+}
+.grid-container{
+  width: fit-content;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  background: #33393e;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  
+}
+.display{
+  background: rgb(73, 73, 73);
+  border: none;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  width: 200px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 30px;
+  text-align: right;
   color: white;
+  box-shadow: inset 30px 35px 60px rgba(3, 3, 3, 0.1), inset -15px -15px 20px #5e656b;
+  overflow: hidden;
 }
-
-.App-link {
-  color: #61dafb;
+.item{
+  padding: 10px 5px;
+  border: none;
+  border-radius: 10px;
+  background: #33393e;
+  color: #eee;
+  cursor: pointer;
+  box-shadow: inset 15px 15px 20px rgba(0, 0, 0, 0.5),
+    inset -10px -10px 30px rgba(255, 255, 255, 0.1);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item:active{
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25),
+  inset -5px -5px 10px rgba(255, 255, 255, 0.1);
+}
+.item1{
+  background-color: red;
+  color: white;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  box-shadow: inset 15px 15px 20px rgba(255, 0, 0, 0.5),
+    inset -5px -5px 40px rgba(255, 255, 255, 0.3);
+}
+.item2{
+  color: white;
+  background-color: rgb(36, 172, 36);
+  grid-column-start: 4;
+  grid-column-end: 5;
+  grid-row-start: 4;
+  grid-row-end: 6;
+  box-shadow: inset 15px 15px 20px rgba(36, 172, 36, 0.5),
+  inset -5px -5px 40px rgba(255, 255, 255, 0.3);
+}
+.item3{
+  color: white;
+  background-color: rgb(75, 75, 242);
+  box-shadow: inset 15px 15px 20px rgba(75, 75, 242, 0.5),
+  inset -5px -5px 40px rgba(255, 255, 255, 0.3);
 }
