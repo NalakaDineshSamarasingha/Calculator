@@ -16,9 +16,13 @@ function App() {
   }
   function action(event){
     const x = event.target.value;
-    setOperator(operator+x);
+    setOperator(x);
     setTotal(total + value.toString());
-    setValue("");
+    if(total && value !== ""){
+      equal();
+    }else{
+      setValue("");
+    }
   }
   function equal(){
     if(operator === "+"){
